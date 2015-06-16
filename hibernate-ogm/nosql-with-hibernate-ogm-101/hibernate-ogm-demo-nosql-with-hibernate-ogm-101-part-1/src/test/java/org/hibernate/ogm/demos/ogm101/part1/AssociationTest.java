@@ -65,6 +65,7 @@ public class AssociationTest {
 	entityManager.persist(bob);
 
 	entityManager.getTransaction().commit();
+	entityManager.close();
     }
 
     @Test
@@ -84,6 +85,7 @@ public class AssociationTest {
 			"Exploring Carisbrooke Castle");
 
 	entityManager.getTransaction().commit();
+	entityManager.close();
     }
 
     @Test
@@ -106,6 +108,7 @@ public class AssociationTest {
 			"Exploring Carisbrooke Castle");
 
 	entityManager.getTransaction().commit();
+	entityManager.close();
     }
 
     @Test
@@ -123,6 +126,7 @@ public class AssociationTest {
 	assertThat(loadedHike.getOrganizer().getFirstName()).isEqualTo("Bob");
 
 	entityManager.getTransaction().commit();
+	entityManager.close();
     }
 
     @Test
@@ -142,6 +146,7 @@ public class AssociationTest {
 	assertThat(loadedHike.getOrganizer().getFirstName()).isEqualTo("Bob");
 
 	entityManager.getTransaction().commit();
+	entityManager.close();
     }
 
     @Test
@@ -161,6 +166,7 @@ public class AssociationTest {
 	assertThat(loadedHike.getOrganizer().getFirstName()).isEqualTo("Bob");
 
 	entityManager.getTransaction().commit();
+	entityManager.close();
     }
 
 }
