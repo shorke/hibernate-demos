@@ -6,7 +6,6 @@
 	version="2.0">
 
 	<!-- Use this for Neo4j -->
-	<!--
 	<persistence-unit name="hikePu" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.ogm.jpa.HibernateOgmPersistence</provider>
 
@@ -16,9 +15,9 @@
 			<property name="hibernate.ogm.neo4j.database_path" value="target/test_data_dir" />
 		</properties>
 	</persistence-unit>
-	-->
 
 	<!-- Use this for MongoDB -->
+	<!--
 	<persistence-unit name="hikePu" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.ogm.jpa.HibernateOgmPersistence</provider>
 
@@ -28,4 +27,5 @@
 			<property name="hibernate.ogm.datastore.create_database" value="true" />
 		</properties>
 	</persistence-unit>
+	-->
 </persistence>
