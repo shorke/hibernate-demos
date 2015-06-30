@@ -36,6 +36,9 @@ public class Person {
 	@OneToMany(mappedBy = "organizer", cascade = CascadeType.PERSIST)
 	private Set<Hike> organizedHikes = new HashSet<>();
 
+	@OneToMany(mappedBy = "organizer", cascade = CascadeType.PERSIST)
+	private Set<Race> organizedRaces = new HashSet<>();
+	
 	// constructors, getters and setters...
 
 	Person() {
@@ -76,5 +79,13 @@ public class Person {
 
 	public void setOrganizedHikes(Set<Hike> organizedHikes) {
 		this.organizedHikes = organizedHikes;
+	}
+
+	public Set<Race> getOrganizedRaces() {
+	    return organizedRaces;
+	}
+
+	public void setOrganizedRaces(Set<Race> organizedRaces) {
+	    this.organizedRaces = organizedRaces;
 	}
 }
